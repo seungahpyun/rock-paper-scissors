@@ -18,6 +18,16 @@ function getRandomChoice() {
 let computerSelection = getRandomChoice();
 let playerSelection = prompt("Please Enter Rock, Paper or Scissors")
 
+switch (playerSelection)) {
+  case 'rock'.toLowerCase:
+    return 'rock'.toLowerCase
+  case 'paper'.toLowerCase:
+    return 'paper'.toLowerCase
+  case 'scissors'.toLowerCase:
+    return 'scissors'.toLowerCase
+  default:
+    return 'Please Enter Rock, Paper or Scissors'
+}
 
 
 
