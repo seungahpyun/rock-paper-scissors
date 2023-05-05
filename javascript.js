@@ -1,10 +1,5 @@
-let playerScore = 0
-let computerScore = 0
-
-function playerSelection() {
-  let selection = (prompt("Please Enter Rock, Paper or Scissors")).toLocaleLowerCase;
-  return selection
-}
+let playerScore = 0;
+let computerScore = 0;
 
 
 function getRandomChoice() {
@@ -19,11 +14,17 @@ function getRandomChoice() {
   }
 }
 
+
 let computerSelection = getRandomChoice();
+let playerSelection = prompt("Please Enter Rock, Paper or Scissors")
+
+
+
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-    roundWinner = 'tie'
+    alert(`It's a draw! ${computerSelection} can't beat ${playerSelection}!`)
+    updateScore()
   }
   if (
     (playerSelection === 'rock' && computerSelection === 'scissors') ||
@@ -31,7 +32,8 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection === 'paper' && computerSelection === 'rock')
   ) {
     playerScore++
-    roundWinner = 'player'
+    alert(`You won! ${playerSelection} beats ${computerSelection}`)
+    updateScore()
   }
   if (
     (computerSelection === 'rock' && playerSelection === 'scissors') ||
@@ -39,16 +41,21 @@ function playRound(playerSelection, computerSelection) {
     (computerSelection === 'paper' && playerSelection === 'rock')
   ) {
     computerScore++
-    roundWinner = 'computer'
+    alert(`You lost! ${computerSelection} beats ${playerSelection}!`)
+    updateScore()
   }
-  // updateScoreMessage(roundWinner, playerSelection, computerSelection)
+}
+
+function updateScore(playerScore, computerScore) {
+  if (playerScore == 5) {
+    alert("You Won!")
+  } else if (computerScore == 5) {
+    alert("You Lose")
+  } else {
+    calert("Play More")
+  }
 }
 
 
-
-function isGameOver() {
-  return playerScore === 5 || computerScore === 5
-}
-
-
-console.log(playRound(playerSelection(), computerSelection));
+console.log(playRound(playerSelection, computerSelection))
+console.log(playerScore)
