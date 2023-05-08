@@ -16,19 +16,16 @@ function getRandomChoice() {
 
 
 let computerSelection = getRandomChoice();
-let playerSelection = prompt("Please Enter Rock, Paper or Scissors")
+let playerSelection = prompt("Please Enter Rock, Paper or Scissors").toLocaleLowerCase()
 
-switch (playerSelection)) {
-  case 'rock'.toLowerCase:
-    return 'rock'.toLowerCase
-  case 'paper'.toLowerCase:
-    return 'paper'.toLowerCase
-  case 'scissors'.toLowerCase:
-    return 'scissors'.toLowerCase
-  default:
-    return 'Please Enter Rock, Paper or Scissors'
+
+function checkInput(playerSelection) {
+  if ((playerSelection==='paper') || (playerSelection==='rock') || (playerSelection==='scissors')){
+    //pass
+  } else {
+    alert('Please Enter Rock, Paper or Scissors')
+  }
 }
-
 
 
 function playRound(playerSelection, computerSelection) {
