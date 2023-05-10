@@ -29,9 +29,17 @@ body{
   padding: 32px;
 }
 
+
+
 .btnSquare{
   font-size: 32px;
   padding:16px;
   border-radius: 8px;
   border: 2px solid gray;
+  transition-duration: 0.4s;
+}
+
+.btnSquare:hover{
+  background-color: black;
+  color: white;
 }
