@@ -6,39 +6,43 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <header class = "header">
-      <h1 class = "title">✊ ✋ ✌</h1>
+    <header class="header">
+      <h1 class="title">✊ ✋ ✌</h1>
     </header>
-    <main class = "main">
-      <div class = "scoreBoard">
-        <h2 class= "scoreInfo"> First to score 5 points wins the game </h2>
-        <div class ="scoreContainer">
-          <div class = "scoreBox">
+    <main class="main">
+      <div class="scoreboard">
+        <h3 class="score-message" id="scoreMessage">
+          First to score 5 points wins the game
+        </h3>
+        <div class="scores-container">
+          <div class="score-box">
             <div class="sign" id="playerSign">❔</div>
             <p class="score" id="playerScore">Player: 0</p>
           </div>
-          <div class = "scorebox">
+          <div class="score-box">
             <div class="sign" id="computerSign">❔</div>
             <p class="score" id="computerScore">Computer: 0</p>
           </div>
         </div>
       </div>
       <div class="buttons">
-        <button class="btnSquare" id="rockBtn">
+        <button class="btn-square" id="rockBtn">
           <div class="sign">✊</div>
         </button>
-        <button class="btnSquare" id="paperBtn">
+        <button class="btn-square" id="paperBtn">
           <div class="sign">✋</div>
         </button>
-        <button class="btnSquare" id="scissorsBtn">
+        <button class="btn-square" id="scissorsBtn">
           <div class="sign">✌</div>
         </button>
-        <div class="modal" id="endgameModal">
-          <p class="modaltitle" id="endgameMsg"></p>
-          <button class="btnRestart" id="restartBtn">Play again</button>
-        </div>
-        <div class="overlay" id="overlay"></div>
+      </div>
     </main>
+    <div class="modal" id="endgameModal">
+      <p class="modal-title" id="endgameMsg"></p>
+      <button class="btn-restart" id="restartBtn">Play again</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script src="script.js"></script>
   </body>
-  <script src ="javascript.js"></script>
+  <script src="javascript.js"></script>
 </html>
